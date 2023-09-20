@@ -7,12 +7,12 @@ public class Homework5_1 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("請輸入寬與高：");
         int width = scanner.nextInt();
-        int length = scanner.nextInt();
-        starSquare(width, length);
+        int height = scanner.nextInt();
+        starSquare(width, height);
     }
 
-    public static void starSquare(int width, int length) {
-        for (int i = 0; i < length; i++) {
+    public static void starSquare(int width, int height) {
+        for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 System.out.print("*");
             }
