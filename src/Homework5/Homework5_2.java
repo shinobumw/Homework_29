@@ -9,14 +9,13 @@ public class Homework5_2 {
 
     public static void randAvg() {
         System.out.println("本次亂數結果：");
-        int[] array = new int[10];
-        double sum = 0;
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int)(Math.random() * 101);
-            System.out.print(array[i] + " ");
-            sum += array[i];
+        int sum = 0;
+        for (int i = 0; i < 10; i++) {
+            int number = (int)(Math.random() * 101);
+            System.out.print(number + " ");
+            sum += number;
         }
         System.out.println();
-        System.out.println(sum / array.length);
+        System.out.println(sum / 10);
     }
 }

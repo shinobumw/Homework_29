@@ -13,7 +13,7 @@ public class Inkbrush extends Pen{
 
     @Override
     public double getPrice() {
-        return this.price * 0.9;
+        return price * 0.9;
     }
 
     @Override

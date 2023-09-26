@@ -22,12 +22,12 @@ public abstract class Pen {
         this.brand = brand;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
     public double getPrice() {
         return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public abstract void write();

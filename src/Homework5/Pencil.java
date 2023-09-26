@@ -12,7 +12,7 @@ public class Pencil extends Pen{
 
     @Override
     public double getPrice() {
-        return this.price * 0.8;
+        return price * 0.8;
     }
 
     @Override
