@@ -7,4 +7,6 @@
 - [x] Homework 5
 - [x] Homework 6
 - [x] Homework 7
-- [ ] Homework 8
+- [x] Homework 8
+- [ ] Homework 9
+- [ ] Homework 10
