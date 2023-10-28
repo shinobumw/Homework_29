@@ -8,5 +8,5 @@
 - [x] Homework 6
 - [x] Homework 7
 - [x] Homework 8
-- [ ] Homework 9
+- [x] Homework 9
 - [x] Homework 10
