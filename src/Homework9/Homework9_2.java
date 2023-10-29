@@ -1,21 +1,16 @@
 package Homework9;
 
-import java.util.NoSuchElementException;
-
-public class Homework9_2 {
-    public static void main(String[] args) {
-        Account account = new Account();
-        Parent mom = new Parent(account);
-        Children xiongDa = new Children(account);
-        mom.start();
-        xiongDa.start();
-    }
-}
-
 class Account {
     private int balance = 0;
+    private int momCount = 0;
+    private int xiongDaCount = 0;
+
 
     public synchronized void deposit(int amount) {
+        momCount++;
+        if (xiongDaCount >= 10)
+            return;
+
         while (balance > 3000) {
             System.out.println("媽媽看到餘額在3000以上，暫停匯款");
             try {
@@ -32,6 +27,10 @@ class Account {
     }
 
     public synchronized void withdraw(int amount) {
+        xiongDaCount++;
+        if (momCount >= 10)
+            return;
+
         while (balance < amount) {
             System.out.println("熊大看到帳戶沒錢，暫停提款");
             try {
@@ -80,5 +79,15 @@ class Children extends Thread {
 //            System.out.println("[熊大第" + (i + 1) + "次]");
             account.withdraw(1000);
         }
+    }
+}
+
+public class Homework9_2 {
+    public static void main(String[] args) {
+        Account account = new Account();
+        Parent mom = new Parent(account);
+        Children xiongDa = new Children(account);
+        mom.start();
+        xiongDa.start();
     }
 }
